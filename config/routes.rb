@@ -1,4 +1,6 @@
 Savingpool::Application.routes.draw do
+  resources :users
+
   get "projects/index"
   get "projects/show"
   get "projects/new"
