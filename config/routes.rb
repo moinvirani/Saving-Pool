@@ -1,13 +1,17 @@
 Savingpool::Application.routes.draw do
     
- 
+
   root 'home#index'
 
+  resources :user_sessions
   resources :users
+
   resources :projects
-
-
   
+  
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
