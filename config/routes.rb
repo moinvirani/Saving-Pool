@@ -1,12 +1,13 @@
 Savingpool::Application.routes.draw do
     
-
   root 'home#index'
 
-  resources :user_sessions
-  resources :users
+  resources :projects do
+    resources :pledges, only: [:new, :create]
+  end
+  resources :users, except => [:index, :destroy]
+  resources :user_sessions, :only => [:new, :create, :destroy]
 
-  resources :projects
   
   
   get 'login' => 'user_sessions#new', :as => :login
