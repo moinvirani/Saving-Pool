@@ -5,11 +5,9 @@ gem 'unicorn'
 
 gem 'rails', '4.0.1' 
 gem 'email_spec'
-gem 'nokogiri'
 gem 'pg'
 #gem 'bootstrap-sass' 
-#gem 'devise'
-#gem 'sorcery'
+gem 'sorcery'
 #gem "friendly_id"
 #gem "iso_country_codes"
 
@@ -41,8 +39,8 @@ end
 
 group :test do
   gem "faker"
-  gem "capybara"
-  gem 'selenium-webdriver'
+  #gem "capybara"
+  #gem 'selenium-webdriver'
   gem 'factory_girl_rails'
 end
 
