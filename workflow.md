@@ -41,8 +41,10 @@ project:references
 
 <!-- Categories -->
 
-rails g model Category name:string
-
+rails g model Category 
+name:string
+project_id:integer
+category_name:string
 
 <!-- Comments -->
 
