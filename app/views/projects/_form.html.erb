@@ -1,0 +1,11 @@
+<%= form_for @project, html: { multipart: true} do |f| %>
+
+<div class="field">
+  <%= f.label "Project Title" %> <br>
+  <%= f.text_field :title %>
+</div>
+
+ <label>Category:</label> <br>
+ <%= collection_select(:project, :category_id, Category.all, :project_id, :category_name, :prompt => 'Select One')  %>
+
+<% end %>
