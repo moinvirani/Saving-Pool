@@ -11,7 +11,8 @@ gem 'sorcery'
 #gem "friendly_id"
 #gem "iso_country_codes"
 
-gem "paperclip"
+gem "rmagick"
+gem "carrierwave"
 #gem 'ckeditor'
 #gem 'aws-sdk'
 
@@ -52,7 +53,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'turbolinks'
   gem 'jbuilder'
-  gem "asset_sync"
+  #gem "asset_sync"
 end
   
 # jQuery & jQuery UI
