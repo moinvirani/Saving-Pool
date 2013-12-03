@@ -1,5 +1,16 @@
 <%= form_for @project, html: { multipart: true} do |f| %>
 
+  <% if @project.errors.any? %>
+    <p><%= pluralize(@project.errors.count, "error") %> prevented this project from being saved:</p>
+    <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <br>
+
   <div class="field">
     <%= f.label "Project Title" %> <br>
     <%= f.text_field :title %>
@@ -8,14 +19,18 @@
   <label>Category:</label> <br>
   <%= collection_select(:project, :category_id, Category.all, :project_id, :category_name, :prompt => 'Select One')  %>
 
+  <div class="field"> <br>
+    <%= f.label "What is your financial target?" %> <br>
+    <%= f.number_field :goal %>
+  </div>
 
   <div class="field">
-    <%= f.label :start_date %>
+    <%= f.label :start_date %> <br>
     <%= f.date_field :start_date %>
   </div>
 
   <div class="field">
-    <%= f.label :end_date %>
+    <%= f.label :end_date %> <br>
     <%= f.date_field :end_date %>    
   </div>
 

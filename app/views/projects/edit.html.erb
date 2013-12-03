@@ -1,2 +1,5 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<h1> Editing <%= @project.name %></h1>
+
+<%= link_to "Cancel", project_path(@project[:id]) %>
+
+<%= render "form" %>

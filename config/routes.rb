@@ -3,7 +3,7 @@ Savingpool::Application.routes.draw do
   root 'home#index'
 
   resources :projects do
-    resources :pledges, only: [:new, :create]
+    resources :pledges
   end
   resources :users
   resources :user_sessions
