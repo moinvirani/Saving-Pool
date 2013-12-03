@@ -16,8 +16,6 @@ user_id:integer
 description: text
 
 
-
-
 <!-- Users  -->
 
 CONTROLLERS for:

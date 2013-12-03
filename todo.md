@@ -1,4 +1,10 @@
-<!-- TODO -->
+<!-- TODO FOR MVP -->
+
+GENERAL:
+
++ List of projects
+  + based on geographic location
+  + based on category
 
 
 
@@ -14,4 +20,4 @@ USER AUTHENTICATION:
 <!-- COMPLETE -->
 
 - Simple user authentication with sorcery
-
+- 

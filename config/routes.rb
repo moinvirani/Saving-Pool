@@ -5,10 +5,10 @@ Savingpool::Application.routes.draw do
   resources :projects do
     resources :pledges, only: [:new, :create]
   end
-  resources :users, except => [:index, :destroy]
-  resources :user_sessions, :only => [:new, :create, :destroy]
+  resources :users
+  resources :user_sessions
 
-  
+
   
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
@@ -20,7 +20,7 @@ Savingpool::Application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  #   get 'products/:id' => 'catalog#4view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
