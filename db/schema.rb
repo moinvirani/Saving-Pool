@@ -37,17 +37,14 @@ ActiveRecord::Schema.define(version: 20131203022939) do
   create_table "projects", force: true do |t|
     t.string   "title"
     t.integer  "goal"
+    t.integer  "min_pledge"
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "category_id"
-    t.integer  "user_id"
+    t.integer  "creater_id"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
     t.string   "image"
   end
 
@@ -56,6 +53,9 @@ ActiveRecord::Schema.define(version: 20131203022939) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
+    t.string   "city"
+    t.string   "street_address"
+    t.string   "province"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

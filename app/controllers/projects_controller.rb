@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+    skip_before_filter :require_login, only: [:index, :show]
   
   def index
     @projects = Project.all
@@ -44,7 +45,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :goal, :start_date, :end_date, :user_id, :category_id, :image)
+    params.require(:project).permit(:title, :description, :goal, :start_date, :end_date, :creater_id, :category_id, :image)
     
   end
 end

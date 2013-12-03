@@ -20,7 +20,7 @@
   <%= collection_select(:project, :category_id, Category.all, :project_id, :category_name, :prompt => 'Select One')  %>
 
   <div class="field"> <br>
-    <%= f.label "What is your financial target?" %> <br>
+    <%= f.label "What is your funding goal?" %> <br>
     <%= f.number_field :goal %>
   </div>
 
@@ -44,6 +44,8 @@
     <%= f.file_field :image %>
   </div>
    
+   <%= f.hidden_field :creater_id, :value => current_user.id %>
+
   <div class="action">
     <%= f.submit %>
   </div>
