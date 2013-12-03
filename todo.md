@@ -20,4 +20,5 @@ USER AUTHENTICATION:
 <!-- COMPLETE -->
 
 - Simple user authentication with sorcery
+- image uploading with carrierwave
 - 
