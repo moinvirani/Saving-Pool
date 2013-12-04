@@ -41,6 +41,8 @@ project:references
 
 <!-- Categories -->
 
+rails g controller categories index new create show edit destroy update --no-test-framework
+
 rails g model Category 
 name:string
 project_id:integer

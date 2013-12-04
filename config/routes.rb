@@ -1,5 +1,12 @@
 Savingpool::Application.routes.draw do
     
+  get "categories/index"
+  get "categories/new"
+  get "categories/create"
+  get "categories/show"
+  get "categories/edit"
+  get "categories/destroy"
+  get "categories/update"
   root 'home#index'
 
   resources :projects do
