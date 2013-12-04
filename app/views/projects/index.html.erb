@@ -8,11 +8,13 @@
     <% @projects.each do |project| %>
       <div class="pin">
         <%= link_to image_tag(project.image_url(:thumb)), "/projects/#{project.id}" %>
-        <li><%= link_to project.title, "/projects/#{project.id}" %></li> <br>
-        <%= project.description %> <br>
-        <%= project.goal %>  <br>
-        <%= project.start_date %> <br>
-        <%= project.end_date %> <br>
+        <strong>
+          <%= link_to project.title, "/projects/#{project.id}" %>
+        </strong> <br> 
+        <span> by <%# user_id%></span>
+
+        <p><%= project.description %></p> 
+        <p>Goal: <%= project.goal %></p>  <br>
       </div>
 
     <% end %>

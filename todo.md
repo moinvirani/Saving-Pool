@@ -1,5 +1,8 @@
 <!-- TODO FOR MVP -->
 
+=> FIX SEEDS FILE!!! (VIP!!!)
+
+
 GENERAL:
 
 + List of projects

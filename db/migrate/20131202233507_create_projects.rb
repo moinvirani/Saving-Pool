@@ -7,7 +7,7 @@ class CreateProjects < ActiveRecord::Migration
       t.datetime :start_date
       t.datetime :end_date
       t.integer :category_id
-      t.integer :creater_id
+      t.integer :user_id
       t.text :description
 
       t.timestamps

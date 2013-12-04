@@ -1,4 +1,4 @@
-<h1> <%= @project.title %></h1>
+<h1> <%= @project.title %> <small class="subheader"> by <%= @project.user.name %></h1>
 
 <div>
   <%= image_tag @project.image_url(:large).to_s %> <br>

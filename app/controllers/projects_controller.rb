@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-
+    @project.user_id = current_user.id
     if @project.save
       redirect_to projects_url
     else
@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :goal, :start_date, :end_date, :creater_id, :category_id, :image)
+    params.require(:project).permit(:title, :description, :goal, :start_date, :end_date, :user_id, :category_id, :image)
     
   end
 end

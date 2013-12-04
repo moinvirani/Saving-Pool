@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20131203022939) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "category_id"
-    t.integer  "creater_id"
+    t.integer  "user_id"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
