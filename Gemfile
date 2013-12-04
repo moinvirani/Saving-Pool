@@ -10,7 +10,7 @@ gem 'pg'
 gem 'sorcery'
 #gem "friendly_id"
 #gem "iso_country_codes"
-
+gem 'zurb-foundation'
 gem "rmagick"
 gem "carrierwave"
 #gem 'ckeditor'
