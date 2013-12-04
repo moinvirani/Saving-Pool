@@ -1,19 +1,14 @@
 Savingpool::Application.routes.draw do
-    
-  get "categories/index"
-  get "categories/new"
-  get "categories/create"
-  get "categories/show"
-  get "categories/edit"
-  get "categories/destroy"
-  get "categories/update"
-  root 'home#index'
 
+  root 'home#index'
+  resources :users
+  resources :user_sessions
+  
   resources :projects do
     resources :pledges
   end
-  resources :users
-  resources :user_sessions
+  resources :categories
+  
 
 
   

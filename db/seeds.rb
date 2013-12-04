@@ -35,6 +35,11 @@ user4 = User.create! ({
   password_confirmation: "userpooser",
   })
 
+categories = [ "Art", "Dance", "Design", "Food", "Music", "Technology", "Travel", "Fashion", "Games", "Theatre", "Sports" ]
+categories.each do |category|
+  Category.create(category_name: category)
+end
+
 
 
 5.times do |i|
